@@ -85,7 +85,7 @@ func TestListAccount(t *testing.T) {
 
 	arg := ListAccountParams{
 		Limit:  5,
-		Offset: 5,
+		Offset: 0,
 	}
 
 	accounts, err := testQuery.ListAccount(context.Background(), arg)
@@ -94,5 +94,6 @@ func TestListAccount(t *testing.T) {
 
 	for _, account := range accounts {
 		require.NotEmpty(t, account)
+
 	}
 }
